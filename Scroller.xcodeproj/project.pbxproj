@@ -10,8 +10,8 @@
 		23291FFD1567C1DA00FE8BEB /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23291FFC1567C1DA00FE8BEB /* AddressBookUI.framework */; };
 		2329203A1567C56500FE8BEB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232920391567C56500FE8BEB /* AudioToolbox.framework */; };
 		233657B8154A7965006C3110 /* UserBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 233657B6154A721C006C3110 /* UserBoxView.m */; };
-		233657B9154A796C006C3110 /* RecentScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 233657B4154A721C006C3110 /* RecentScrollViewController.m */; };
-		233657BA154A7970006C3110 /* RecentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 233657B2154A721C006C3110 /* RecentView.m */; };
+		233657B9154A796C006C3110 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 233657B4154A721C006C3110 /* ScrollViewController.m */; };
+		233657BA154A7970006C3110 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 233657B2154A721C006C3110 /* ScrollView.m */; };
 		233657BC154A7B74006C3110 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233657BB154A7B74006C3110 /* QuartzCore.framework */; };
 		235E117715482A1900948DC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235E117615482A1900948DC9 /* UIKit.framework */; };
 		235E117915482A1900948DC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235E117815482A1900948DC9 /* Foundation.framework */; };
@@ -27,10 +27,10 @@
 /* Begin PBXFileReference section */
 		23291FFC1567C1DA00FE8BEB /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		232920391567C56500FE8BEB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		233657B1154A721C006C3110 /* RecentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentView.h; sourceTree = "<group>"; };
-		233657B2154A721C006C3110 /* RecentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentView.m; sourceTree = "<group>"; };
-		233657B3154A721C006C3110 /* RecentScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentScrollViewController.h; sourceTree = "<group>"; };
-		233657B4154A721C006C3110 /* RecentScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentScrollViewController.m; sourceTree = "<group>"; };
+		233657B1154A721C006C3110 /* ScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
+		233657B2154A721C006C3110 /* ScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
+		233657B3154A721C006C3110 /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		233657B4154A721C006C3110 /* ScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		233657B5154A721C006C3110 /* UserBoxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserBoxView.h; sourceTree = "<group>"; };
 		233657B6154A721C006C3110 /* UserBoxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserBoxView.m; sourceTree = "<group>"; };
 		233657BB154A7B74006C3110 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -102,10 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				23B83825156A5B890098F27B /* Resources */,
-				233657B1154A721C006C3110 /* RecentView.h */,
-				233657B2154A721C006C3110 /* RecentView.m */,
-				233657B3154A721C006C3110 /* RecentScrollViewController.h */,
-				233657B4154A721C006C3110 /* RecentScrollViewController.m */,
+				233657B1154A721C006C3110 /* ScrollView.h */,
+				233657B2154A721C006C3110 /* ScrollView.m */,
+				233657B3154A721C006C3110 /* ScrollViewController.h */,
+				233657B4154A721C006C3110 /* ScrollViewController.m */,
 				233657B5154A721C006C3110 /* UserBoxView.h */,
 				233657B6154A721C006C3110 /* UserBoxView.m */,
 				235E118515482A1900948DC9 /* AppDelegate.h */,
@@ -203,8 +203,8 @@
 				235E118315482A1900948DC9 /* main.m in Sources */,
 				235E118715482A1900948DC9 /* AppDelegate.m in Sources */,
 				233657B8154A7965006C3110 /* UserBoxView.m in Sources */,
-				233657B9154A796C006C3110 /* RecentScrollViewController.m in Sources */,
-				233657BA154A7970006C3110 /* RecentView.m in Sources */,
+				233657B9154A796C006C3110 /* ScrollViewController.m in Sources */,
+				233657BA154A7970006C3110 /* ScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,21 @@
+//
+// Prefix header for all source files of the 'Scroller' target in the 'Scroller' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <AddressBook/AddressBook.h>
+    #import <AudioToolbox/AudioToolbox.h>
+    #import <QuartzCore/QuartzCore.h>
+#endif
+
+#define RELEASE_SAFELY(__POINTER) { [__POINTER release]; __POINTER = nil; }
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]

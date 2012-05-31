@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RecentScrollViewController.h"
+#import "ScrollViewController.h"
 
 @implementation AppDelegate
 
@@ -22,7 +22,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    RecentScrollViewController* recentViewController = [[RecentScrollViewController alloc] initWithNibName:nil bundle:nil];
+    ScrollViewController* recentViewController = [[ScrollViewController alloc] initWithNibName:nil bundle:nil];
     navigationController = [[UINavigationController alloc] initWithRootViewController:recentViewController];
     
     self.window.rootViewController = navigationController;

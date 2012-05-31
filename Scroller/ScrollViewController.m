@@ -44,6 +44,10 @@
     
 	[recentView bringViewAtIndexToFront:0 animated:YES];
     
+    if ([peopleArray count] == 0) {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Opps !!" message:@"No Contacts!  So Sad :( " delegate:nil cancelButtonTitle:@"I Got it!" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
     
 }
 

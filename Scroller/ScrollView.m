@@ -20,7 +20,7 @@
 
 @implementation ScrollView
 
-@synthesize recentViewDelegate;
+@synthesize scrollViewDelegate;
 
 - (id)initWithFrame:(CGRect)frame {
     
@@ -184,8 +184,8 @@
 	
 	if(touch.view == currentTouch){
 		if(touch.tapCount == 1 && currentIndex == [views indexOfObject:currentTouch]){
-            if ([self.recentViewDelegate respondsToSelector:@selector(selectedView:)]) {
-                [self.recentViewDelegate selectedView:(UserBoxView*)currentTouch];
+            if ([self.scrollViewDelegate respondsToSelector:@selector(selectedView:)]) {
+                [self.scrollViewDelegate selectedView:(UserBoxView*)currentTouch];
             }
 		}
 	}
@@ -269,7 +269,7 @@
 
 - (void) dealloc {	
     AudioServicesDisposeSystemSoundID(soundID);
-    self.recentViewDelegate = nil;
+    self.scrollViewDelegate = nil;
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

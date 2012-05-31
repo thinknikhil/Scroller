@@ -12,7 +12,7 @@
 
 
 @interface ScrollViewController : UIViewController<ScrollViewDelegate,ABNewPersonViewControllerDelegate> {
-	ScrollView* recentView;
+	ScrollView* scrollView;
 }
-@property (nonatomic, readonly) ScrollView* recentView;
+@property (nonatomic, readonly) ScrollView* scrollView;
 @end

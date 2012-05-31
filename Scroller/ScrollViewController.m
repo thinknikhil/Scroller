@@ -11,7 +11,7 @@
 
 @implementation ScrollViewController
 
-@synthesize recentView;
+@synthesize scrollView;
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -26,11 +26,11 @@
     UIBarButtonItem* addContactBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewContact:)];
     self.navigationItem.rightBarButtonItem = addContactBarButton;
 		
-	recentView  = [[ScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-	recentView.recentViewDelegate = self;
-	recentView.backgroundColor = RGBACOLOR(0,0,0,0.2);
-	recentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	[self.view addSubview:recentView];
+	scrollView  = [[ScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+	scrollView.scrollViewDelegate = self;
+	scrollView.backgroundColor = RGBACOLOR(0,0,0,0.2);
+	scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	[self.view addSubview:scrollView];
 	
     ABAddressBookRef addressBook = ABAddressBookCreate();
     
@@ -38,11 +38,11 @@
     
     for (id per in peopleArray) {
         ABRecordRef person = (__bridge ABRecordRef)per;
-        [recentView addUserInList:person];
+        [scrollView addUserInList:person];
     }
     CFRelease(addressBook);
     
-	[recentView bringViewAtIndexToFront:0 animated:YES];
+	[scrollView bringViewAtIndexToFront:0 animated:YES];
     
     if ([peopleArray count] == 0) {
         UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Opps !!" message:@"No Contacts!  So Sad :( " delegate:nil cancelButtonTitle:@"I Got it!" otherButtonTitles:nil, nil];
@@ -69,8 +69,8 @@
 {
 	[self dismissModalViewControllerAnimated:YES];
     if (person) {
-        [recentView addUserInList:person];
-        [recentView jumpToLast:YES];
+        [scrollView addUserInList:person];
+        [scrollView jumpToLast:YES];
     }
     
 }

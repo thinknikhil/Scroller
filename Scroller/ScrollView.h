@@ -29,7 +29,7 @@
 
 }
 
-@property (nonatomic, unsafe_unretained) id <ScrollViewDelegate> recentViewDelegate;
+@property (nonatomic, unsafe_unretained) id <ScrollViewDelegate> scrollViewDelegate;
 
 - (void) bringViewAtIndexToFront:(int)index animated:(BOOL)animated;
 - (void) addUserInList:(ABRecordRef)personRef;

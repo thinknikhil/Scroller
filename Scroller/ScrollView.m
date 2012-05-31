@@ -14,6 +14,7 @@
 - (void) animateToIndex:(int)index  animated:(BOOL)animated;
 - (void) load;
 - (void) setup;
+- (void) playSound;
 @end
 
 

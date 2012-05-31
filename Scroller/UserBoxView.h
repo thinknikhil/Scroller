@@ -17,8 +17,8 @@
 	
 }
 
-@property (nonatomic) UIImageView* userImageView;
-@property (nonatomic) UILabel* displayTextLabel;
+@property (nonatomic,retain) UIImageView* userImageView;
+@property (nonatomic,retain) UILabel* displayTextLabel;
 @property (nonatomic,assign) NSInteger personRecordRefID;
 //@property (nonatomic,retain) UILabel* unreadMsgLabel;
 
